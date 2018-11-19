@@ -1,0 +1,65 @@
+
+//</script><script>
+
+
+//This Indo.js Is inspirated By Amethyst Animion
+window.onload = function() {
+  indo_js = document.querySelectorAll('script[type=indo-js]');
+  for (idjs=0; idjs<indo_js.length; idjs++) {
+    eval(INDO_JS(indo_js[idjs].innerHTML));
+  }
+}
+function INDO_JS(data) {
+  return data
+  .replace(/fungsi/gm, 'function')
+  .replace(/\.dalamHTML/gm, '.innerHTML')
+  .replace(/\.isi/gm, '.value')
+  .replace(/\.tbhPendengar/gm, '.addEventListener')
+  .replace(/\.ganti/gm, '.replace')
+  .replace(/\.tmpl\|/gm, '.style.')
+  //If Statement
+  .replace(/lain jika/gm, 'else if')
+  .replace(/jika/gm, 'if')
+  .replace(/lainnya/gm, 'else')
+  .replace(/atau/gm, '||')
+  .replace(/dan/gm, '&&')
+  //Pembulatan
+  .replace(/kebawahkan/gm, 'Math.floor')
+  .replace(/keataskan/gm, 'Math.ceil')
+  .replace(/bulatkan/gm, 'Math.round')
+  //Interval
+  .replace(/setiap/gm, 'setInterval')
+  .replace(/pada/gm, 'setTimeout')
+  .replace(/hentikan/gm, 'clearInterval')
+  //sesuatu
+  .replace(/untuk/gm, 'for')
+  .replace(/banyaknya/gm, 'length')
+  .replace(/jendela/gm, 'window')
+  .replace(/dokumen/gm, 'document')
+  //dapatkan
+  .replace(/\.dapatkanId/gm, '.getElementById')
+  .replace(/\.dapatkanTag/gm, '.getElementsByTagName')
+  .replace(/\.dapatkanClass/gm, 'getElementsByClassName')
+  //waktu
+  .replace(/Waktu/gm, 'Date')
+  .replace(/\.dapatkanTahun/gm, '.getDate')
+  .replace(/\.dapatkanBulan/gm, '.getMonth')
+  .replace(/\.dapatkanHari/gm, '.getDate')
+  .replace(/\.dapatkanJam/gm, '.getHours')
+  .replace(/\.dapatkanMenit/gm, '.getMinutes')
+  .replace(/\.dapatkanDetik/gm, '.getSeconds')
+  .replace(/\.dapatkanMillidetik/gm, '.getMilliseconds')
+  //
+  .replace(/jadikan/gm, 'let')
+  .replace(/peringatan/gm, 'alert')
+  .replace(/baru/gm, 'new')
+  .replace(/\.panjang/gm, '.width')
+  .replace(/\.lebar/gm, '.height')
+  .replace(/pribadi/gm, 'private')
+  .replace(/publik/gm, 'public')
+  .replace(/\.mainkan/gm, '.play')
+  .replace(/Musik/gm, 'Audio')
+  .replace(/pesan/gm, 'console.log')
+}
+//</script><script type='indo-js'>
+    
